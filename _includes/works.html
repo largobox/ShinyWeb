@@ -1,0 +1,16 @@
+<div class = 'belt_el_cnt works_cnt'>
+	<div class = 'works_cnt_inner'>	
+		<a class = 'to_about' >About me</a>
+		<div class = 'works_header'>
+			<h1>Works</h1>
+		</div>
+		<ul>
+			{% for project in site.data.init_data.projects %}
+				<a class = 'to_work_desc' data-folder = '{{project.folder}}'><li>
+					<img src = './assets/img/thumb.png' />
+					<div class = 'work_load'><strong>{{ project.name }}</strong></div>
+				</li></a>											
+			{% endfor %}
+		</ul>		
+	</div>
+</div>

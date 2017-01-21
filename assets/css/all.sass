@@ -1,0 +1,36 @@
+---
+---
+
+$text_color: #d6d7a6
+$link_color: #d0d356
+
+
+@import 'fonts'
+@import 'animation'
+@import 'belt'
+@import 'about'
+@import 'works'
+@import 'work_desc'
+
+body, html
+	overflow: hidden
+	font-size: 0px
+
+body, html, h1, h2, img, ul, li, a
+	padding: 0px
+	margin: 0px
+
+ul
+	list-style-type: none
+	font-size: 0px
+
+div
+	box-sizing: border-box
+
+a
+	color: $link_color
+	&:hover
+		text-decoration: none
+
+.parent_cnt
+	background-image: url("../img/background.jpg")

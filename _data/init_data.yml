@@ -1,0 +1,12 @@
+settings:
+  email: 'sergey.event@gmail.com'
+
+projects:
+- {name: 1 name, folder: proj_1}
+- {name: 2 name, folder: proj_2}
+- {name: 3 name, folder: proj_3}
+- {name: 4 name, folder: proj_4}
+- {name: 5 name, folder: proj_5}
+- {name: 6 name, folder: proj_6}
+- {name: 7 name, folder: proj_7}
+- {name: 8 name, folder: proj_8}

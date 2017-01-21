@@ -1,0 +1,71 @@
+.works_cnt
+	// background-color: rgba(0, 255, 0, .1)
+
+.works_cnt_inner
+	width: 960px
+	margin: auto
+	padding-top: 50px
+
+	ul
+		padding-top: 50px
+
+		a
+			display: inline-block
+			margin: 0px
+			padding: 0px
+			height: 150px
+
+	li
+		display: inline-block
+		width: 240px
+		height: 150px
+		position: relative
+
+		&:hover
+			cursor: pointer
+
+		&:hover .work_load
+			cursor: pointer
+			display: block
+
+	img
+		width: 100%
+		height: 150px
+
+	a
+		display: inline-block
+		font-size: 18px
+		color: $text_color
+		text-decoration: underline
+		padding: 5px 5px
+		margin-left: 10px
+
+		&:hover
+			cursor: pointer
+			text-decoration: none
+
+.work_load
+	display: none
+	background-color: rgba(0, 0, 0, .9)
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0px
+	text-align: center
+	@extend %animation_target
+
+	strong
+		text-transform: uppercase
+		line-height: 150px
+
+.works_header
+	height: 60px
+	background-color: rgba(0, 0, 0, .55)
+	border-radius: 4px
+	box-shadow: 0px 0px 1px 0px rgba(255, 255, 255, 1)
+
+	h1
+		color: $text_color
+		font-size: 32px
+		text-align: center
+		line-height: 60px
