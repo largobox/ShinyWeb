@@ -4,10 +4,15 @@
 .works_cnt_inner
 	width: 960px
 	margin: auto
-	padding-top: 50px
+
+	@media (max-width: 960px)
+		width: 480px	
+
+	@media (max-width: 480px)
+		width: 300px	
 
 	ul
-		padding-top: 50px
+		padding-top: 30px
 
 		a
 			display: inline-block
@@ -20,6 +25,9 @@
 		width: 240px
 		height: 150px
 		position: relative
+
+		@media (max-width: 480px)
+			width: 300px			
 
 		&:hover
 			cursor: pointer
