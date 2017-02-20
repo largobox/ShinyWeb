@@ -3,10 +3,10 @@
 
 $text_color: #d6d7a6
 $link_color: #d0d356
-
+$bg_color: rgba(33,41,26, .7)
 
 @import 'fonts'
-@import 'animation'
+@import 'lang'
 @import 'belt'
 @import 'about'
 @import 'works'
@@ -15,10 +15,14 @@ $link_color: #d0d356
 body, html
 	overflow: hidden
 	font-size: 0px
+	font-family: 'PT_Sans'
 
-body, html, h1, h2, img, ul, li, a
+body, html, h1, h2, img, ul, li, a, p
 	padding: 0px
 	margin: 0px
+
+p
+	margin: 8px 0px
 
 ul
 	list-style-type: none

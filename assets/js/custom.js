@@ -1,9 +1,13 @@
 $(function(){
-	someFunction();
+	beltSwapper();
 	workDescLoad();
+	changeLangWorkSection();
 });
 
-function someFunction(){
+var currentLanguage = 'RU',
+		to_about = $('.to_about')
+
+function beltSwapper(){
 
 	$('.to_about').click(function(){
 		$('.belt_cnt').css('left', '0%')
@@ -20,6 +24,8 @@ function someFunction(){
 
 function workDescLoad(){
 
+	$.ajaxSetup({ cache: true })
+
 	$('.to_work_desc').click(function(){
 
 			var newTitle = $(this).find('strong').text(),
@@ -29,16 +35,56 @@ function workDescLoad(){
 			$('.work_desc_inner').load(newHtml)
 			$('.work_title').text(newTitle)
 	})
-	// $.ajaxSetup({ cache: true });
+}
 
-	// $('.work_el').click(function(){
+function changeLangWorkSection(){
 
-	// 	var newTitle = $(this).find('strong').text(),
-	// 			newFolder = $(this).data('folder'),
-	// 			spinner = '<div class="loader">Loading...</div>',
-	// 			newHtml = 'work/'+ newFolder +'.html';
+	$('.lang_cnt').click(function(){
+		if ($(this).hasClass('selected_lang')){return}
+		$('.selected_lang').removeClass('selected_lang')
+		$(this).addClass('selected_lang')
 
-	// 	$('.project_load').html(spinner).load(newHtml);
-	// 	$('.porject_title').text(newTitle);
-	// });
+		if ($(this).hasClass('ru_cnt')){
+			toRu()
+		} else {
+			toEn()
+		}
+
+	})
+}
+
+function toRu(){
+	$('.select_arrow').css({
+		'transform': 'rotate(180deg)'
+	})
+	currentLanguage = 'RU'
+	changeToAbout('Обо мне')
+	changeHeaderWork(180)
+}
+
+function toEn(){
+	$('.select_arrow').css({
+		'transform': 'rotate(0deg)'
+	})
+	currentLanguage = 'EN'
+	changeToAbout('About me')
+	changeHeaderWork(0)
+}
+
+function changeToAbout(s){
+	to_about.css({
+		'transform': 'translate(0px, -200px)'
+	})
+	setTimeout(function(){
+		to_about.text(s)
+		to_about.css({
+			'transform': 'translate(0px, 0px)'
+		})
+	}, 250)
+}
+
+function changeHeaderWork(deg){
+	$('.flipper').css({
+		'transform': 'rotateY('+ deg +'deg)'
+	})
 }

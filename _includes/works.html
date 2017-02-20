@@ -1,15 +1,25 @@
 <div class = 'belt_el_cnt works_cnt'>
 	<div class = 'works_cnt_inner'>	
 		<a class = 'to_about' >About me</a>
+		<div class = 'select_lang_cnt'>
+			<div class = 'lang_cnt ru_cnt'><span>RU</span></div>
+			<div class = 'select_arrow'></div>
+			<div class = 'lang_cnt en_cnt selected_lang'><span>EN</span></div>
+		</div>
 		<div class = 'works_header'>
-			<h1>Works</h1>
+			<div class = flipper>
+				<div class = 'back'><h1>Портфолио</h1></div>
+				<div class = 'front'><h1>Works</h1></div>
+			</div>
 		</div>
 		<ul>
 			{% for project in site.data.init_data.projects %}
-				<a class = 'to_work_desc' data-folder = '{{project.folder}}'><li>
-					<img src = './assets/img/thumb.png' />
-					<div class = 'work_load'><strong>{{ project.name }}</strong></div>
-				</li></a>											
+				<a class = 'to_work_desc' data-folder = '{{project.folder}}'>
+					<li>
+						<img src = 'assets/img/works/{{project.folder}}/thumb.jpg' />
+						<div class = 'work_load'><strong>{{ project.name }}</strong></div>
+					</li>
+				</a>											
 			{% endfor %}
 		</ul>		
 	</div>

@@ -1,5 +1,5 @@
 .work_desc_cnt
-	padding-top: 31px
+	padding-top: 45px
 
 .work_desc_inner_cnt
 	width: 720px
@@ -11,22 +11,26 @@
 
 .work_desc_inner
 	width: 100%
-	margin-top: 30px
-	background-color: rgba(0,0,0, .55)
+	margin-top: 16px
+	background-color: $bg_color
 	border-radius: 4px
-	padding: 20px
+	padding: 16px
 	color: $text_color
 	font-size: 18px
+	@media (max-width: 720px)
+		padding: 30px	
+	@media (max-width: 480px)
+		padding: 20px	
 
 	img
+		width: 100%
 		display: block
 		margin: auto
 		box-shadow: 0px 0px 1px 0px rgba(255, 255, 255, 1)
-		width: calc(100% - 40px)	
 
 .work_desc_header
 	height: 60px
-	background-color: rgba(0, 0, 0, .55)
+	background-color: $bg_color
 	border-radius: 4px
 	box-shadow: 0px 0px 1px 0px rgba(255, 255, 255, 1)
 	position: relative
@@ -53,3 +57,4 @@
 	font-size: 32px
 	text-align: center
 	line-height: 60px
+	font-weight: bold

@@ -1,0 +1,49 @@
+.to_about
+	margin: 10px 0px 14px
+	transition: 0.75s
+
+.select_lang_cnt
+	float: right
+	margin: 10px 10px 0 0
+
+.lang_cnt
+	vertical-align: top
+	display: inline-block
+	height: 28px
+	width: 28px
+	background-color: $bg_color
+	color: $text_color
+	border-radius: 50%
+	font-size: 12px
+	padding: 6px 0px 0px 6.5px
+
+	&:hover
+		cursor: pointer
+
+.select_arrow
+	margin: 0px 5px
+	width: 28px
+	height: 28px
+	display: inline-block
+	background-image: url(../img/arrow.svg)
+	transition: 0.75s
+
+.selected_lang
+	transition: 0.25s
+	background-color: $text_color
+	color: $bg_color
+
+.flipper
+	position: relative
+	transition: 0.75s
+	transform-style: preserve-3d
+
+.back, .front
+	width: 100%
+	backface-visibility: hidden
+	position: absolute
+	top: 0
+	left: 0
+
+.back
+	transform: rotateY(180deg)
