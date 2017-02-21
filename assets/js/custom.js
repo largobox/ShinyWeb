@@ -4,21 +4,23 @@ $(function(){
 	changeLangWorkSection();
 });
 
-var currentLanguage = 'RU',
-		to_about = $('.to_about')
+var currentLanguage = 'EN',
+		to_about = $('.to_about'),
+		belt_cnt = $('.belt_cnt')
 
 function beltSwapper(){
 
+
 	$('.to_about').click(function(){
-		$('.belt_cnt').css('left', '0%')
+		belt_cnt.css('left', '0%')
 	})
 
 	$('.to_works').click(function(){
-		$('.belt_cnt').css('left', '-100%')
+		belt_cnt.css('left', '-100%')
 	})
 
 	$('.to_work_desc').click(function(){
-		$('.belt_cnt').css('left', '-200%')
+		belt_cnt.css('left', '-200%')
 	})		
 }
 
@@ -30,7 +32,7 @@ function workDescLoad(){
 
 			var newTitle = $(this).find('strong').text(),
 					newFolder = $(this).data('folder'),
-					newHtml = 'work/'+ newFolder +'.html'	
+					newHtml = 'work/'+ currentLanguage +'/'+ newFolder +'.html'						
 
 			$('.work_desc_inner').load(newHtml)
 			$('.work_title').text(newTitle)
