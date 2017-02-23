@@ -55,8 +55,10 @@ function toRu(){
 		'transform': 'rotate(180deg)'
 	})
 	currentLanguage = 'RU'
-	changeToAbout('Навыки')
-	changeHeaderAbout('Навыки')
+	changeToAbout('Обо мне')
+	changeHeaderAbout('Обо мне')
+	changeContacts('Контакты')
+	changeDesign('Дизайн')
 	changeHeaderWork(180)
 }
 
@@ -65,8 +67,10 @@ function toEn(){
 		'transform': 'rotate(0deg)'
 	})
 	currentLanguage = 'EN'
-	changeToAbout('Skills')
-	changeHeaderAbout('Skills')
+	changeToAbout('About me')
+	changeHeaderAbout('About me')
+	changeContacts('Contacts')
+	changeDesign('Design')
 	changeHeaderWork(0)
 }
 
@@ -90,4 +94,16 @@ function changeHeaderWork(deg){
 
 function changeHeaderAbout(s){
 	$('.about_header h1').text(s)
+}
+
+function changeContacts(s){
+	$('.contacts_translate').text(s)
+}
+
+function changeContacts(s){
+	$('.contacts_translate').text(s)
+}
+
+function changeDesign(s){
+	$('.design_translate').text(s)
 }
