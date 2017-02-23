@@ -9,8 +9,6 @@ var currentLanguage = 'EN',
 		belt_cnt = $('.belt_cnt')
 
 function beltSwapper(){
-
-
 	$('.to_about').click(function(){
 		belt_cnt.css('left', '0%')
 	})
@@ -25,11 +23,8 @@ function beltSwapper(){
 }
 
 function workDescLoad(){
-
 	$.ajaxSetup({ cache: true })
-
 	$('.to_work_desc').click(function(){
-
 			var newTitle = $(this).find('strong').text(),
 					newFolder = $(this).data('folder'),
 					newHtml = 'work/'+ currentLanguage +'/'+ newFolder +'.html'						
@@ -60,7 +55,8 @@ function toRu(){
 		'transform': 'rotate(180deg)'
 	})
 	currentLanguage = 'RU'
-	changeToAbout('Обо мне')
+	changeToAbout('Навыки')
+	changeHeaderAbout('Навыки')
 	changeHeaderWork(180)
 }
 
@@ -69,7 +65,8 @@ function toEn(){
 		'transform': 'rotate(0deg)'
 	})
 	currentLanguage = 'EN'
-	changeToAbout('About me')
+	changeToAbout('Skills')
+	changeHeaderAbout('Skills')
 	changeHeaderWork(0)
 }
 
@@ -89,4 +86,8 @@ function changeHeaderWork(deg){
 	$('.flipper').css({
 		'transform': 'rotateY('+ deg +'deg)'
 	})
+}
+
+function changeHeaderAbout(s){
+	$('.about_header h1').text(s)
 }

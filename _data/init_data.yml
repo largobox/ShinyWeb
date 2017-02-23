@@ -1,15 +1,8 @@
-settings:
-  email: 'sergey.event@gmail.com'
-
 projects:
 - {name: Garage Tools, folder: proj_1}
 - {name: Ginventory, folder: proj_6}
 - {name: Firewatch, folder: proj_5}
-- {name: Demodekoz Lechenie, folder: proj_2}
+- {name: Demodekoz L, folder: proj_2}
 - {name: Rentallo, folder: proj_4}
 - {name: Daily TM, folder: proj_3}
-
-# - {name: 5 name, folder: proj_5}
-# - {name: 6 name, folder: proj_6}
-# - {name: 7 name, folder: proj_7}
-# - {name: 8 name, folder: proj_8}
+- {name: Portfolio, folder: proj_7}

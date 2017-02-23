@@ -1,3 +1,156 @@
-.about_cnt
-	background-color: rgba(255, 0, 0, .1)
-	font-size: 32px
+.about_cnt_inner
+	padding-top: 46px
+	max-width: 720px
+	margin: auto
+	@media (max-width: 720px)
+		width: 480px	
+	@media (max-width: 480px)
+		width: 300px		
+
+.about_header	
+	height: 60px
+	width: 100%
+	background-color: $bg_color
+	border-radius: 4px
+	box-shadow: 0px 0px 1px 0px rgba(255, 255, 255, 1)
+	position: relative
+
+	h1
+		color: $text_color
+		font-size: 32px
+		text-align: center
+		line-height: 60px
+
+.about_to_works_link_cnt	
+	position: absolute
+	top: 10px
+	right: 10px
+
+	svg
+		transform: rotate(180deg)
+		height: 40px
+		width: 40px
+		opacity: .75
+
+		path
+			fill: $text_color
+
+		&:hover
+			opacity: 1
+			cursor: pointer
+
+.about_content
+
+.about_capton_cnt
+	margin-top: 14px
+	width: 150px
+	padding: 0px 10px
+	font-size: 12px
+	text-transform: uppercase
+	height: 32px
+	background-color: $bg_color
+	border-top-right-radius: 4px
+	border-top-left-radius: 4px
+	box-shadow: 0px 0px 1px 0px rgba(255, 255, 255, 1)
+
+	h2
+		line-height: 32px
+		color: $text_color
+
+.about_desc_cnt
+	padding: 4px
+	background-color: $bg_color
+	box-shadow: 0px 0px 1px 0px rgba(255, 255, 255, 1)
+	
+	li
+		margin: 4px
+		display: inline-block
+		height: 60px
+		border-radius: 4px
+		background-color: $text_color
+		background-size: contain
+		background-position: center
+		background-repeat: no-repeat
+		position: relative
+
+		span
+			text-align: center
+			opacity: 0
+			box-sizing: border-box
+			width: 100%
+			height: 100%
+			border-radius: 4px
+			position: absolute
+			top: 0px
+			left: 0px
+			font-size: 14px
+			background-color: rgba(0,0,0, .96)
+			color: white
+			transition: 0.15s
+			line-height: 60px
+
+			&:hover
+				cursor: pointer
+				transition: 0.15s
+				opacity: 1
+
+.cell_std
+	width: 60px
+
+.cell_mid
+	width: 90px
+
+.ubuntu
+	background-image: url(../img/tech/ubuntu.png)
+
+.postgre
+	background-image: url(../img/tech/postgresql.png)
+
+.mysql
+	background-image: url(../img/tech/mysql.png)
+
+.nginx
+	background-image: url(../img/tech/nginx.png)
+
+.ror	
+	background-image: url(../img/tech/ror.png)
+
+.git
+	background-image: url(../img/tech/git.png)
+
+.css
+	background-image: url(../img/tech/css3.png)
+
+.html
+	background-image: url(../img/tech/html5.png)
+
+.js
+	background-image: url(../img/tech/js.png)
+
+.jquery
+	background-image: url(../img/tech/jquery.png)
+
+.sass
+	background-image: url(../img/tech/sass.png)
+
+.reactjs
+	background-image: url(../img/tech/reactjs.png)
+
+.babel
+	background-image: url(../img/tech/babel.png)
+
+.gulp
+	background-image: url(../img/tech/gulp.png)
+
+.webpack
+	background-image: url(../img/tech/webpack.png)
+
+.jekyll	
+	background-image: url(../img/tech/jekyll.png)
+
+.balsamiq
+	background-image: url(../img/tech/balsamiq.png)
+
+.ps
+	background-image: url(../img/tech/ps.png)
+	
