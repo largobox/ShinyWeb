@@ -4,8 +4,7 @@
 $text_color: #d6d7a6
 $link_color: #d0d356
 $bg_color: rgba(23,21,21, .9)
-// $bg_color: rgba(83,69,109, .9)
-// $bg_color: rgba(232,194,75, .9)
+$bg_color_2: #616134
 
 @import 'fonts'
 @import 'lang'
@@ -15,19 +14,16 @@ $bg_color: rgba(23,21,21, .9)
 @import 'work_desc'
 
 body, html
-	overflow: hidden
+	overflow-x: hidden
 	font-size: 0px
 	font-family: 'PT_Sans'
 
-body, html, h1, h2, img, ul, li, a, p
+body, html, h1, h2, h3, img, ul, li, a, p
 	padding: 0px
 	margin: 0px
 
 h1, h2
 	letter-spacing: 1px
-
-p
-	margin: 8px 0px
 
 ul
 	list-style-type: none
@@ -36,12 +32,21 @@ ul
 div
 	box-sizing: border-box
 
+h3
+	font-size: 20px
+	background-color: $bg_color_2
+	padding: 2px 4px
+	border-radius: 4px
+	margin: 18px 0px 2px
+
 a
 	color: $link_color
+
 	&:hover
 		text-decoration: none
 
 .parent_cnt
+	background-attachment: fixed
 	background-size: cover
 	background-position: right bottom
-	background-image: url("../img/background.jpg")
+	background-image: url('../img/background.jpg')
